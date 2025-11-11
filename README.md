@@ -32,3 +32,21 @@ cd bookstore-spring-ci-cd-project
 # Build and run using Maven Wrapper
 ./mvnw clean package
 java -jar target/*.jar
+
+```
+
+## Testing
+
+Run all tests:
+```
+./mvnw test
+```
+
+## CI/CD Pipeline
+
+The Jenkins pipeline automates:
+
+- Build → Maven clean & package
+- Test → Runs unit/integration tests
+- Containerize → Builds Docker image
+- Deploy → Push to container registry or server
